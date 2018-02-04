@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">KDA Counter</string>
+    <string name="about">This app will help keep count of your teams and your opponents kills, assists and deaths in any First Person Shooter (FPS) game. The KDA Ratio is equated using (Kills + Assists) / Deaths.</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="kda_init">0.0</string>
+    <string name="team_a_header">Team A\nKDA Ratio</string>
+    <string name="team_b_header">Team B\nKDA Ratio</string>
+    <string name="kills">Kills: 0</string>
+    <string name="assists">Assists: 0</string>
+    <string name="deaths">Deaths: 0</string>
+    <string name="reset">Reset</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nostalgic Melodies ♪ ♫ ♬</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="zelda">The Legend of Zelda</string>
+    <string name="mario">Mario</string>
+    <string name="pokemon">Pokémon</string>
+</resources>

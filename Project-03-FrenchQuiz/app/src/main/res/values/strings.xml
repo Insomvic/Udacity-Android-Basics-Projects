@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">French Quiz</string>
+    <string name="main_question">Which word most closely represents this image?</string>
+    <string name="submit">Submit</string>
+    <string name="type_answer">Please type here</string>
+    <string name="correct_answer">Awesome! You got it correct!</string>
+    <string name="kind_of_correct_answer">It looks like you got the correct answer!</string>
+    <string name="incorrect_answer">Sorry... The correct answer is</string>
+    <string name="forgot_answer">Oops... You forgot to select an answer!</string>
+    <string name="great_job">Great job! You got</string>
+    <string name="okay_job">Good effort! You got</string>
+    <string name="perfect">Perfect! You got</string>
+    <string name="out_of">out of</string>
+    <string name="correct">correct</string>
+    <string name="try_again">Would you like to try again?</string>
+    <string name="restart">Restart</string>
+</resources>
