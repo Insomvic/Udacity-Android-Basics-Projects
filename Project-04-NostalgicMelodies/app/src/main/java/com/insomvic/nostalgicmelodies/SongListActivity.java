@@ -6,10 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SongList extends AppCompatActivity implements Serializable {
+public class SongListActivity extends AppCompatActivity{
 
     // Create arraylist
     ArrayList<SongInfo> songInfo = new ArrayList<>();

@@ -47,7 +47,7 @@ public class SongInfoAdapter extends ArrayAdapter<SongInfo> {
                 MainActivity.playing_game_name = currentSong.getGameName();
                 MainActivity.playing_album_cover = currentSong.getAlbumResourceId();
                 // Go to playing song activity
-                Intent i = new Intent(view.getContext(), PlayingSong.class);
+                Intent i = new Intent(view.getContext(), PlayingSongActivity.class);
                 view.getContext().startActivity(i);
             }
         });

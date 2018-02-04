@@ -7,6 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:drawSelectorOnTop="true"
-    tools:context="com.insomvic.nostalgicmelodies.SongList">
+    tools:context="com.insomvic.nostalgicmelodies.SongListActivity">
 
 </ListView>

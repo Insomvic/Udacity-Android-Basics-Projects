@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class PlayingSong extends AppCompatActivity {
+public class PlayingSongActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,9 @@ public class PlayingSong extends AppCompatActivity {
         textView = findViewById(R.id.playing_game_name);
         textView.setText(MainActivity.playing_game_name);
         // Set onClickListener
-        PlayPauseClick((ImageView)findViewById(R.id.play_pause));
-        NextSongClick((ImageView)findViewById(R.id.next_song));
-        PreviousSongClick((ImageView)findViewById(R.id.previous_song));
+        playPauseClick((ImageView)findViewById(R.id.play_pause));
+        nextSongClick((ImageView)findViewById(R.id.next_song));
+        previousSongClick((ImageView)findViewById(R.id.previous_song));
         // Back button on toolbar
         try {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,7 +35,7 @@ public class PlayingSong extends AppCompatActivity {
         }
     }
 
-    public void PlayPauseClick(final ImageView imageView) {
+    public void playPauseClick(final ImageView imageView) {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +52,7 @@ public class PlayingSong extends AppCompatActivity {
         });
     }
 
-    public void NextSongClick(final ImageView imageView) {
+    public void nextSongClick(final ImageView imageView) {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,7 @@ public class PlayingSong extends AppCompatActivity {
         });
     }
 
-    public void PreviousSongClick(final ImageView imageView) {
+    public void previousSongClick(final ImageView imageView) {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class PlayingSong extends AppCompatActivity {
 
     // Click event method that specifies what class to return to
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent intent = new Intent(getApplicationContext(), SongList.class);
+        Intent intent = new Intent(getApplicationContext(), SongListActivity.class);
         startActivityForResult(intent, 0);
         return true;
     }

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             // Provide onClickListener
             try {
                 // Only provide click if class exists (prevents crashing)
-                Class className = Class.forName("com.insomvic.nostalgicmelodies.SongList");
+                Class className = Class.forName("com.insomvic.nostalgicmelodies.SongListActivity");
                 click(relativeLayout, className, gameName);
             } catch(ClassNotFoundException e) {
                 System.out.println(e.getMessage());
