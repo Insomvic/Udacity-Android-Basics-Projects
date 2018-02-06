@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="attractions">Attractions</string>
+    <string name="vulcania">Vulcania</string>
+    <string name="vulcania_description">A theme park for exploring volcanoes and the planet Earth. A unique place to have fun and discover the secrets of volcanism.</string>
+    <string name="cathedral">Cathedral</string>
+    <string name="cathedral_description">a Gothic cathedral and French national monument located in the town of Clermont-Ferrand in the Auvergne. It is built entirely in black lava stone, which makes it highly distinctive, and visible from a great distance.</string>
+    <string name="placedejaude">Place de Jaude</string>
+    <string name="placedejaude_description">An important and well-known place in Clermont-Ferrand. A point of passage in the city center, near the Opera House, the cathedral, markets and shopping centers.</string>
+</resources>

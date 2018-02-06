@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="events">Events</string>
+    <string name="festivalducourtmetrage">Festival du Court Metrage</string>
+    <string name="festivalducourtmetrage_description">A film festival where films are shown from around the world and compete for top film. This event usually takes places every year around February.</string>
+    <string name="europavoxfestival">Europavox Festival</string>
+    <string name="europavoxfestival_description">A music festival where it aims to make the diversity of European music production heard. This event usually takes places every year around June and July.</string>
+    <string name="marchedenoel">Marché de Noël</string>
+    <string name="marchedenoel_description">A Christmas market that is located right next to the cathedral. There are many festive items to purchase here as well as delicious, seasonal foods.</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parks">Parks</string>
+    <string name="lejardinlecoq">Le Jardin Lecoq</string>
+    <string name="lejardinlecoq_description">Le Jardin Lecoq is very spacious with many paths that lead to a lake, pond and garden. Much of this park is covered in grass. It is located near the college and provides free Wi-Fi.</string>
+    <string name="leparcdemontjuzet">Le Parc de Montjuzet</string>
+    <string name="leparcdemontjuzet_description">The park is quite the hike, but at the end of it there is a beautiful scenery that onlooks the city of Clermont-Ferrand.</string>
+    <string name="placedu1ermai">Place du 1er Mai</string>
+    <string name="placedu1ermai_description">A small park known for its asymmetrical statues, running water along the grass and the Poly-Dome.</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="restaurants">Restaurants</string>
+    <string name="chatlounge">Chat\'Lounge</string>
+    <string name="chatlounge_description">The entire Chat\'Lounge team and its six cats welcome you to downtown Clermont-Ferrand. Great food and beverages for lunch while petting our furry friends.</string>
+    <string name="lezinc">Le Zinc</string>
+    <string name="lezinc_description">A friendly atmosphere that offers their traditional cuisines. During beautiful days, you can enjoy our dishes on the terrace.</string>
+    <string name="chezcecile">Chez Cécile</string>
+    <string name="chezcecile_description">A great place for warm drinks and tasty desserts. You can’t go wrong with their hot chocolate and cookies.</string>
+</resources>
