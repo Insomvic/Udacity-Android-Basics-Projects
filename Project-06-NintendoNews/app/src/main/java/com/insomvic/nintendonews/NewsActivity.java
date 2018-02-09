@@ -24,9 +24,10 @@ public class NewsActivity extends AppCompatActivity
     // Static variables relating to Guardian API
     private static final String API_KEY = "test";
     private static final String SEARCH_TEXT = "Nintendo";
-    private static final int PAGE_SIZE = 30;
+    private static final String SHOW_FIELDS = "thumbnail,bodyText,byline";
+    private static final int PAGE_SIZE = 10;
     private static final String REQUEST_URL =
-            "http://content.guardianapis.com/search?section=games&order-by=newest&show-fields=thumbnail,bodyText&q=" + SEARCH_TEXT + "&page-size=" + PAGE_SIZE + "&api-key=" + API_KEY;
+            "http://content.guardianapis.com/search?section=games&order-by=newest&show-fields=" + SHOW_FIELDS + "&q=" + SEARCH_TEXT + "&page-size=" + PAGE_SIZE + "&api-key=" + API_KEY;
     private static final int NEWS_LOADER_ID = 1;
     // Adapter variables
     private NewsAdapter mAdapter;

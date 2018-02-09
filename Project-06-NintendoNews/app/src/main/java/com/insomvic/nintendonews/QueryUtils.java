@@ -1,5 +1,7 @@
 package com.insomvic.nintendonews;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -115,19 +117,39 @@ public final class QueryUtils {
                 JSONObject currentNews = newsArray.getJSONObject(i);
                 String title = currentNews.getString("webTitle");
                 String date = currentNews.getString("webPublicationDate");
+                String section = currentNews.getString("sectionName");
                 String url = currentNews.getString("webUrl");
                 // Get custom field text (thumbnail image and body text)
                 JSONObject fields = currentNews.getJSONObject("fields");
                 String description = fields.getString("bodyText");
                 String image = fields.getString("thumbnail");
+                String author = "Unknown";
+                try {
+                    author = fields.getString("byline");
+                } catch (JSONException e) {
+                    Log.e(LOG_TAG, "Couldn't find author", e);
+                }
+                // Start downloading thumbnail image
+                Bitmap thumbnail = getThumbnail(image);
                 // Create News object and add to ArrayList
-                News article = new News(title, date, description, image, url);
+                News article = new News(title, author, date, section, description, thumbnail, url);
                 news.add(article);
             }
         } catch (JSONException e) {
-            Log.e("QueryUtils", "Problem parsing the news JSON results", e);
+            Log.e(LOG_TAG, "Problem parsing the news JSON results", e);
         }
         return news;
+    }
+
+    private static Bitmap getThumbnail(String url) {
+        try {
+            URL imageUrl = new URL(url);
+            Bitmap thumbnail = BitmapFactory.decodeStream(imageUrl.openConnection().getInputStream());
+            return thumbnail;
+        } catch (Exception e) {
+            Log.e(LOG_TAG, "Couldn't retrieve thumbnail image", e);
+            return null;
+        }
     }
 
 }
