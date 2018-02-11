@@ -122,15 +122,21 @@ public final class QueryUtils {
                 // Get custom field text (thumbnail image and body text)
                 JSONObject fields = currentNews.getJSONObject("fields");
                 String description = fields.getString("bodyText");
-                String image = fields.getString("thumbnail");
                 String author = "Unknown";
+                // Create temporary bitmap
+                Bitmap thumbnail = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
                 try {
                     author = fields.getString("byline");
                 } catch (JSONException e) {
                     Log.e(LOG_TAG, "Couldn't find author", e);
                 }
-                // Start downloading thumbnail image
-                Bitmap thumbnail = getThumbnail(image);
+                // Start getting thumbnail image
+                try {
+                    String image = fields.getString("thumbnail");
+                    thumbnail = getThumbnail(image);
+                } catch (JSONException e) {
+                    Log.e(LOG_TAG, "Couldn't find thumbnail", e);
+                }
                 // Create News object and add to ArrayList
                 News article = new News(title, author, date, section, description, thumbnail, url);
                 news.add(article);
@@ -147,7 +153,7 @@ public final class QueryUtils {
             Bitmap thumbnail = BitmapFactory.decodeStream(imageUrl.openConnection().getInputStream());
             return thumbnail;
         } catch (Exception e) {
-            Log.e(LOG_TAG, "Couldn't retrieve thumbnail image", e);
+            Log.e(LOG_TAG, "Couldn't download thumbnail image", e);
             return null;
         }
     }
