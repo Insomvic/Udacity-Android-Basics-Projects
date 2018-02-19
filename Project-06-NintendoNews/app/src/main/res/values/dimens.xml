@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="no_padding">0dp</dimen>
+    <dimen name="half_padding">8dp</dimen>
+    <dimen name="full_padding">16dp</dimen>
+    <dimen name="weight_width">0dp</dimen>
+    <dimen name="between_text">1dp</dimen>
+    <dimen name="divider_thickness">1dp</dimen>
+    <dimen name="details_text_size">12sp</dimen>
+</resources>

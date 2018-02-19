@@ -1,5 +1,6 @@
 package com.insomvic.nintendonews;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.TextUtils;
@@ -25,6 +26,11 @@ public final class QueryUtils {
 
     // Log name for easy debugging
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
+    Context context;
+
+    public QueryUtils(Context mContext) {
+        context = mContext;
+    }
 
     // Query the Guardian data and return a list of news objects
     public static List<News> fetchNewsData(String requestUrl) {
@@ -122,7 +128,7 @@ public final class QueryUtils {
                 // Get custom field text (thumbnail image and body text)
                 JSONObject fields = currentNews.getJSONObject("fields");
                 String description = fields.getString("bodyText");
-                String author = "Unknown";
+                String author = "";
                 // Create temporary bitmap
                 Bitmap thumbnail = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
                 try {

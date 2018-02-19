@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingStart="0dp"
-    android:paddingLeft="0dp"
-    android:paddingEnd="16dp"
-    android:paddingRight="16dp">
+    android:paddingStart="@dimen/no_padding"
+    android:paddingLeft="@dimen/no_padding"
+    android:paddingEnd="@dimen/full_padding"
+    android:paddingRight="@dimen/full_padding">
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/weight_width"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:scaleType="centerCrop"
@@ -19,13 +19,13 @@
         tools:src="@drawable/bg_nintendo_news"/>
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/weight_width"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
+        android:paddingTop="@dimen/half_padding"
+        android:paddingBottom="@dimen/half_padding"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/full_padding"
+        android:layout_marginStart="@dimen/full_padding"
         android:layout_weight="3"
         android:orientation="vertical">
 
@@ -45,44 +45,43 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/divider_thickness"
             android:background="@android:color/darker_gray"/>
 
         <TextView
             android:id="@+id/author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="1dp"
-            android:paddingBottom="1dp"
+            android:paddingTop="@dimen/between_text"
+            android:paddingBottom="@dimen/between_text"
             android:textStyle="italic"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="12sp"
+            android:textSize="@dimen/details_text_size"
             tools:text="By: Nintendo" />
 
         <TextView
             android:id="@+id/section"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="1dp"
+            android:paddingBottom="@dimen/between_text"
             android:textStyle="italic"
-            android:textSize="12sp"
+            android:textSize="@dimen/details_text_size"
             tools:text="Section: Games" />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="1dp"
+            android:paddingBottom="@dimen/between_text"
             android:textStyle="italic"
-            android:textSize="12sp"
+            android:textSize="@dimen/details_text_size"
             tools:text="Published: 2/9/2018 3:00 PM" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/divider_thickness"
             android:background="@android:color/darker_gray"/>
-
 
         <TextView
             android:id="@+id/description"

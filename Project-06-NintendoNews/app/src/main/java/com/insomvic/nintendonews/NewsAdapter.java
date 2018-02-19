@@ -22,9 +22,11 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
     // Log name for easy debugging
     private static final String LOG_TAG = NewsAdapter.class.getSimpleName();
+    private final Context context;
 
-    public NewsAdapter(Context context, List<News> news) {
-        super(context, 0, news);
+    public NewsAdapter(Context mContext, List<News> news) {
+        super(mContext, 0, news);
+        context = mContext;
     }
 
     @Override
@@ -72,7 +74,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         newDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
         try {
             Date formattedDate = simpleDateFormat.parse(date);
-            return "Published: " + newDateFormat.format(formattedDate);
+            return context.getString(R.string.published) + newDateFormat.format(formattedDate);
         } catch (ParseException e) {
             Log.e(LOG_TAG, "Problem parsing the date.", e);
             return null;
@@ -80,18 +82,22 @@ public class NewsAdapter extends ArrayAdapter<News> {
     }
 
     private String formatAuthor(String author) {
-        return "By: " + author;
+        if (author == "") {
+            return context.getString(R.string.by) + context.getString(R.string.unknown);
+        } else {
+            return context.getString(R.string.by) + author;
+        }
     }
 
     private String formatSection(String section) {
-        return "Section: " + section;
+        return context.getString(R.string.section) + section;
     }
 
     private String formatDescription(String description) {
         if (description != null) {
             return description;
         } else {
-            return  "No context provided...";
+            return  context.getString(R.string.no_context);
         }
     }
 

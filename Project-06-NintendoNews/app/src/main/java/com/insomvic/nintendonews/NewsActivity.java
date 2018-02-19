@@ -31,6 +31,9 @@ public class NewsActivity extends AppCompatActivity
     private static final int MIN_NEWS_COUNT = 5;
     private static final int MAX_NEWS_COUNT = 25;
     private static final String API_KEY = "test";
+    private static final String SECTION_KEY = "games";
+    private static final String SHOW_FIELDS_KEY = "thumbnail,bodyText,byline";
+    private static final String SEARCH_KEY = "Nintendo";
     private static final String REQUEST_URL = "http://content.guardianapis.com/search";
     private static final int NEWS_LOADER_ID = 1;
     // Adapter variables
@@ -108,19 +111,19 @@ public class NewsActivity extends AppCompatActivity
         // Make sure user defines reasonable amount of pages to load
         if (Integer.parseInt(newsCount) > MAX_NEWS_COUNT) {
             newsCount = Integer.toString(MAX_NEWS_COUNT);
-            Toast.makeText(NewsActivity.this, "The maximum amount of articles to load is " + MAX_NEWS_COUNT + "! Please check the settings.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NewsActivity.this, getString(R.string.max_amount) + MAX_NEWS_COUNT + getString(R.string.check_settings), Toast.LENGTH_SHORT).show();
         } else if (Integer.parseInt(newsCount) < MIN_NEWS_COUNT) {
             newsCount = Integer.toString(MIN_NEWS_COUNT);
-            Toast.makeText(NewsActivity.this, "The minimum amount of articles to load is " + MIN_NEWS_COUNT + "! Please check the settings.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NewsActivity.this, getString(R.string.min_amount) + MIN_NEWS_COUNT + getString(R.string.check_settings), Toast.LENGTH_SHORT).show();
         }
         // Build URI based on API queries
         Uri baseUri = Uri.parse(REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
         // Add query parameters for specific search
-        uriBuilder.appendQueryParameter("section", "games");
+        uriBuilder.appendQueryParameter("section", SECTION_KEY);
         uriBuilder.appendQueryParameter("order-by", orderBy);
-        uriBuilder.appendQueryParameter("show-fields", "thumbnail,bodyText,byline");
-        uriBuilder.appendQueryParameter("q", "Nintendo");
+        uriBuilder.appendQueryParameter("show-fields", SHOW_FIELDS_KEY);
+        uriBuilder.appendQueryParameter("q", SEARCH_KEY);
         uriBuilder.appendQueryParameter("page-size", newsCount);
         uriBuilder.appendQueryParameter("api-key", API_KEY);
         // Create loader based on preferences
