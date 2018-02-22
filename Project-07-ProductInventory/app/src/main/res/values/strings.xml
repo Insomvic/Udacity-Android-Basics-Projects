@@ -26,6 +26,7 @@
     <string name="edittext_supplier_phone">Supplier Phone #</string>
     <string name="call_supplier">Call Supplier</string>
     <string name="failed_to_call">Failed to call. Please insert a valid number.</string>
+    <string name="missing_data">Please make sure all fields are filled out and try again</string>
 
     <string name="delete_all_inventory">Delete all of Inventory?\nThis cannot be recovered!</string>
     <string name="discard_changes">Discard changes and quit editing?</string>

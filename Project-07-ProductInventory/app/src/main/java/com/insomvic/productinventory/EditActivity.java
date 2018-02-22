@@ -109,11 +109,11 @@ public class EditActivity extends AppCompatActivity implements
         String quantityString = quantityEditText.getText().toString().trim();
         String supplierNameString = supplierNameEditText.getText().toString().trim();
         String supplierPhoneString = supplierPhoneEditText.getText().toString().trim();
-        // If nothing was added, no row will be created
-        if (currentInventoryUri == null &&
-                TextUtils.isEmpty(productNameString) && TextUtils.isEmpty(priceString) &&
-                TextUtils.isEmpty(quantityString) && TextUtils.isEmpty(supplierNameString) &&
+        // If a row is missing data, let user know all fields need to be inputted
+        if (TextUtils.isEmpty(productNameString) || TextUtils.isEmpty(priceString) ||
+                TextUtils.isEmpty(quantityString) || TextUtils.isEmpty(supplierNameString) ||
                 TextUtils.isEmpty(supplierPhoneString)) {
+            Toast.makeText(this, getString(R.string.missing_data), Toast.LENGTH_LONG).show();
             return;
         }
         // Put the custom strings into ContentValue's
@@ -141,6 +141,8 @@ public class EditActivity extends AppCompatActivity implements
                 Toast.makeText(this, getString(R.string.edit_item_success), Toast.LENGTH_SHORT).show();
             }
         }
+        // Return to main activity
+        finish();
     }
 
     @Override
@@ -166,7 +168,6 @@ public class EditActivity extends AppCompatActivity implements
             // Respond to check icon
             case R.id.save:
                 saveInventory();
-                finish();
                 return true;
             // Respond to delete icon
             case R.id.delete:
