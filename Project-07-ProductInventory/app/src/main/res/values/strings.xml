@@ -1,3 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Product Inventory</string>
+
+    <string name="test_product">Test Product #%1$s</string>
+    <string name="test_supplier">Test Supplier #%1$s</string>
+
+    <string name="title_add_product">Add New Product</string>
+    <string name="title_edit_product">Edit Existing Product</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_dummy">Insert Dummy Data</string>
+    <string name="menu_delete_all">Delete All</string>
+    <string name="nothing">Nothing to show...</string>
+    <string name="nothing_subtitle">Please add to the inventory...</string>
+    <string name="sale">\u0020\u0020Sale</string>
+    <string name="sale_success">Awesome! You sold %1$s for $%2$s</string>
+    <string name="sale_fail">You don\'t have enough %1$s in inventory!</string>
+
+    <string name="category_product">Product</string>
+    <string name="category_supplier">Supplier</string>
+    <string name="edittext_product_name">Product Name</string>
+    <string name="edittext_price">Product Price</string>
+    <string name="edittext_quantity">Product Quantity</string>
+    <string name="edittext_supplier_name">Supplier Name</string>
+    <string name="edittext_supplier_phone">Supplier Phone #</string>
+    <string name="call_supplier">Call Supplier</string>
+    <string name="failed_to_call">Failed to call. Please insert a valid number.</string>
+
+    <string name="delete_all_inventory">Delete all of Inventory?\nThis cannot be recovered!</string>
+    <string name="discard_changes">Discard changes and quit editing?</string>
+    <string name="delete_product">Delete this product?</string>
+    <string name="continue_editing">Continue Editing</string>
+    <string name="discard">Discard</string>
+    <string name="delete">Delete</string>
+    <string name="delete_success">Product deleted</string>
+    <string name="delete_error">Error deleting</string>
+    <string name="cancel">Cancel</string>
+    <string name="unknown">Unknown</string>
+
+    <string name="new_item_error">Error with saving to inventory</string>
+    <string name="new_item_success">Product saved successfully</string>
+    <string name="edit_item_error">Error with updating to inventory</string>
+    <string name="edit_item_success">Product updated successfully</string>
+
+    <string name="main_price">Price: $%1$s</string>
+    <string name="main_quantity">Quantity: %1$s</string>
+    <string name="main_supplier_name">Supplier: %1$s</string>
+    <string name="main_supplier_phone">Phone: %1$s</string>
 </resources>

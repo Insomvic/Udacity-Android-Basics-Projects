@@ -21,15 +21,16 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
         //SQLite command line
         String SQL_CREATE_INVENTORY_TABLE =  "CREATE TABLE " + InventoryEntry.TABLE_NAME + " ("
                 + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + InventoryEntry.COLUMN_PRODUCT_NAME + " TINYTEXT NOT NULL, "
-                + InventoryEntry.COLUMN_PRICE + " FLOAT(10,2) NOT NULL DEFAULT 0.00, "
+                + InventoryEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
+                + InventoryEntry.COLUMN_PRICE + " REAL NOT NULL DEFAULT 0, "
                 + InventoryEntry.COLUMN_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
-                + InventoryEntry.COLUMN_SUPPLIER_NAME + " TINYTEXT NOT NULL, "
-                + InventoryEntry.COLUMN_SUPPLIER_PHONE + " INT(10) NOT NULL);";
+                + InventoryEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
+                + InventoryEntry.COLUMN_SUPPLIER_PHONE + " CHARACTER(10) NOT NULL);";
         // Execute SQLite command line
         db.execSQL(SQL_CREATE_INVENTORY_TABLE);
     }
 
+    // No need to update yet
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
